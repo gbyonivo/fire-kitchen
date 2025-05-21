@@ -3,7 +3,7 @@ import { SearchState } from "@/types/states/search-state";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 const initialState: SearchState = {
-  fetching: false,
+  searching: false,
   recipes: [],
   error: null,
 };
@@ -14,30 +14,30 @@ export const searchSlice = createSlice({
   name: "_search",
   initialState,
   reducers: {
-    setFetching: (state) => {
+    setSearching: (state) => {
       return {
         ...state,
-        fetching: true,
+        searching: true,
         error: null,
       };
     },
-    fetchSuccess: (state, action: PayloadAction<Recipe[]>) => {
+    searchSuccess: (state, action: PayloadAction<Recipe[]>) => {
       return {
         ...state,
-        fetching: false,
+        searching: false,
         recipes: action.payload,
       };
     },
-    fetchError: (state, action: PayloadAction<string>) => {
+    searchError: (state, action: PayloadAction<string>) => {
       return {
         ...state,
-        fetching: false,
+        searching: false,
         error: action.payload,
       };
     },
   },
 });
 
-export const { setFetching, fetchSuccess, fetchError } = searchSlice.actions;
+export const { setSearching, searchSuccess, searchError } = searchSlice.actions;
 
 export default searchSlice.reducer;

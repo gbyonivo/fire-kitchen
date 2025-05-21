@@ -74,7 +74,7 @@ export function MultiSelect<T>({
           anchor="bottom"
           transition
           className={clsx(
-            "w-(--button-width) rounded-xl border border-white/5 bg-white/5 p-1 [--anchor-gap:--spacing(1)] focus:outline-none",
+            "w-(--button-width) rounded-xl border border-white/5 bg-black p-1 [--anchor-gap:--spacing(1)] focus:outline-none",
             "transition duration-100 ease-in data-leave:data-closed:opacity-0"
           )}
         >

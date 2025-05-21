@@ -31,7 +31,7 @@ export const convertRecipe = (response: unknown): Recipe | null => {
       area: response.strArea,
       instructions: response.strInstructions,
       thumbnail: response.strMealThumb,
-      tags: response.strTags.split(","),
+      tags: response.strTags?.split(",") || [],
       youtube: response.strYoutube,
       ingredients: getIngredients(response),
     };

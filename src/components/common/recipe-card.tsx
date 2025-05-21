@@ -6,7 +6,10 @@ interface RecipeCardProps {
 
 export function RecipeCard({ recipe }: RecipeCardProps) {
   return (
-    <div className="bg-black rounded-xl border border-white/10 flex flex-col">
+    <div
+      className="bg-black rounded-xl border border-white/10 flex cursor-pointer 
+    flex-col transition-all duration-300 hover:scale-105"
+    >
       <Image
         src={recipe.thumbnail}
         alt={recipe.name}
@@ -14,7 +17,7 @@ export function RecipeCard({ recipe }: RecipeCardProps) {
         height={150}
         className="w-full h-fullobject-cover rounded-t-xl"
       />
-      <div className="p-2">
+      <div className="p-2 h-20 overflow-auto">
         <h2 className="text-white text-sm font-bold">{recipe.name}</h2>
         <p className="text-white/50 text-sm">{recipe.category}</p>
         <p className="text-white/50 text-sm">{recipe.area}</p>

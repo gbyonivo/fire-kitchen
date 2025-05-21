@@ -10,7 +10,8 @@ import {
   SampleIngredient,
 } from "@/types/ingredient";
 import { convertIngredientList } from "@/utils/ingridient-converter";
-import axios, { AxiosError } from "axios";
+import { KitchenAxios } from "@/utils/kitchen-axios";
+import { AxiosError } from "axios";
 import { useCallback, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
@@ -30,9 +31,7 @@ export function useIngridients(): {
     const fetch = async () => {
       console.log("fetching ingridients 2");
       try {
-        const response = await axios.get(
-          "https://www.themealdb.com/api/json/v1/1/list.php?i=list"
-        );
+        const response = await KitchenAxios.get("list.php?i=list");
         const data = (await response.data) as { meals: unknown[] };
 
         if (isSampleIngredient(data.meals?.[0])) {
