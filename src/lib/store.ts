@@ -16,6 +16,7 @@ const cachePersistConfig = {
   key: "cache",
   storage,
   whitelist: ["ingridients", "ingridientCache", "keywordsCache"],
+  blacklist: ["fetchingIngridients", "fetchingIngridientsError"],
 };
 
 const rootReducer = combineReducers({

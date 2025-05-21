@@ -6,6 +6,7 @@ interface ButtonProps {
   className?: string;
   loading?: boolean;
   disabled?: boolean;
+  onClick?: () => void;
 }
 
 const disabledClassName = "bg-gray-600 data-open:bg-gray-600 text-gray-400";
@@ -18,6 +19,7 @@ export function Button({
   className,
   loading,
   disabled,
+  onClick,
 }: ButtonProps) {
   return (
     <HeadlessButton
@@ -28,6 +30,7 @@ export function Button({
           disabled ? disabledClassName : enabledClassName
         } ${className}`}
       disabled={loading || disabled}
+      onClick={onClick}
     >
       <div className="flex items-center gap-2">
         {loading && <Spinner size="small" />}

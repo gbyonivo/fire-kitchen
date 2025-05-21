@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import { Providers } from "./providers";
 
 const benyoritha = localFont({
   src: [
@@ -24,7 +25,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`antialiased ${benyoritha.className}`}>{children}</body>
+      <body className={`antialiased ${benyoritha.className}`}>
+        <Providers>{children}</Providers>
+      </body>
     </html>
   );
 }

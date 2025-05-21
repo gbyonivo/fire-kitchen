@@ -67,3 +67,10 @@ export function isSampleRecipe(response: unknown): response is SampleRecipe {
     typeof response === "object" && response !== null && "idMeal" in response
   );
 }
+
+export const SampleIngredient = {
+  idIngredient: "1",
+  strIngredient: "Chicken",
+  strDescription: "The chi.",
+  strType: null,
+};

@@ -1,4 +1,4 @@
-export interface Ingredient {
+export interface RecipeIngredient {
   name: string;
   measure: string;
 }
@@ -12,5 +12,5 @@ export interface Recipe {
   thumbnail: string;
   tags: string[];
   youtube: string;
-  ingredients: Ingredient[];
+  ingredients: RecipeIngredient[];
 }

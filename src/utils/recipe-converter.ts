@@ -1,8 +1,8 @@
-import { Ingredient, Recipe } from "@/types/recipe";
+import { RecipeIngredient, Recipe } from "@/types/recipe";
 import { isSampleRecipe, SampleRecipe } from "@/types/sample-recipe";
 
-const getIngredients = (response: SampleRecipe): Ingredient[] => {
-  const ingredients: Ingredient[] = [];
+const getIngredients = (response: SampleRecipe): RecipeIngredient[] => {
+  const ingredients: RecipeIngredient[] = [];
   for (let i = 1; i <= 20; i++) {
     // @ts-expect-error Dynamic property access on SampleRecipe type
     const ingredient = response[`strIngredient${i}`];

@@ -1,21 +1,43 @@
+import { Ingredient } from "@/types/ingredient";
 import { Recipe } from "@/types/recipe";
 import { CacheState } from "@/types/states/cache-state";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { AxiosError } from "axios";
 
 const initialState: CacheState = {
   ingridientCache: {},
   keywordsCache: {},
   ingridients: [],
+  fetchingIngridients: false,
+  fetchingIngridientsError: null,
 };
 
 export const cacheSlice = createSlice({
   name: "_cache",
   initialState,
   reducers: {
-    setIngridients: (state, action: PayloadAction<string[]>) => {
+    setFetchingIngridients: (state) => {
+      return {
+        ...state,
+        fetchingIngridients: true,
+        fetchingIngridientsError: null,
+      };
+    },
+    setFetchingIngridientsError: (
+      state,
+      action: PayloadAction<AxiosError | string>
+    ) => {
+      return {
+        ...state,
+        fetchingIngridientsError: action.payload,
+        fetchingIngridients: false,
+      };
+    },
+    setIngridients: (state, action: PayloadAction<Ingredient[]>) => {
       return {
         ...state,
         ingridients: action.payload,
+        fetchingIngridients: false,
       };
     },
     updateIngridientCache: (
@@ -51,7 +73,12 @@ export const cacheSlice = createSlice({
   },
 });
 
-export const { setIngridients, updateIngridientCache, updateKeywordsCache } =
-  cacheSlice.actions;
+export const {
+  setIngridients,
+  updateIngridientCache,
+  updateKeywordsCache,
+  setFetchingIngridients,
+  setFetchingIngridientsError,
+} = cacheSlice.actions;
 
 export default cacheSlice.reducer;
