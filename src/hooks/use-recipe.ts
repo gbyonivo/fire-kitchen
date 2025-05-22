@@ -18,6 +18,7 @@ export function useRecipe({ recipeId }: { recipeId: string }) {
 
   const fetchRecipe = useCallback(() => {
     const getRecipe = async () => {
+      if (recipe) return;
       try {
         setLoading(true);
         const response = await KitchenAxios.get(`/lookup.php`, {
@@ -38,7 +39,7 @@ export function useRecipe({ recipeId }: { recipeId: string }) {
       }
     };
     getRecipe();
-  }, [dispatch, recipeId]);
+  }, [dispatch, recipeId, recipe]);
 
   useEffect(() => {
     if (recipe?.id || loading || error) return;

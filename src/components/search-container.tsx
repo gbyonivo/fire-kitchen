@@ -3,7 +3,7 @@
 import { Button } from "./common/button";
 import { MultiSelect } from "./common/multi-select";
 import { useEffect, useState } from "react";
-import { useIngridients } from "@/hooks/use-ingridients";
+import { useIngredients } from "@/hooks/use-ingredients";
 import { Ingredient } from "@/types/ingredient";
 import { TextInput } from "./common/text-input";
 import { useSearch } from "@/hooks/use-search";
@@ -25,7 +25,7 @@ export function SearchContainer() {
     (state: RootState) => state.search
   );
   const { searchRecipe } = useSearch();
-  const { ingridients, ingridientCache } = useIngridients();
+  const { ingridients, ingridientCache } = useIngredients();
   const getIngridients = () => {
     return (
       searchParams

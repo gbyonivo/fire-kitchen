@@ -1,4 +1,8 @@
-import { searchSuccess, setSearching } from "@/lib/slices/search-slice";
+import {
+  searchError,
+  searchSuccess,
+  setSearching,
+} from "@/lib/slices/search-slice";
 import { Ingredient } from "@/types/ingredient";
 import { KitchenAxios } from "@/utils/kitchen-axios";
 import { convertRecipe } from "@/utils/recipe-converter";
@@ -49,8 +53,9 @@ export function useSearch() {
         }, {});
 
         dispatch(searchSuccess(Object.values(uniqueRecipes)));
-      } catch (error) {
-        console.error(error);
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+      } catch (e) {
+        dispatch(searchError("We couldn't find any recipes"));
       }
     },
     [dispatch]

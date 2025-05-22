@@ -15,7 +15,7 @@ import { AxiosError } from "axios";
 import { useCallback, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-export function useIngridients(): {
+export function useIngredients(): {
   ingridients: Ingredient[];
   fetching: boolean;
   error: AxiosError | string | null;

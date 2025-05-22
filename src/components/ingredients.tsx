@@ -2,7 +2,7 @@ import { Recipe } from "@/types/recipe";
 import { SidePanel } from "./common/side-panel";
 import { useState } from "react";
 import { Ingredient } from "@/types/ingredient";
-import { useIngridients } from "@/hooks/use-ingridients";
+import { useIngridients } from "@/hooks/use-ingredients";
 import clsx from "clsx";
 
 interface IngredientsProps {
