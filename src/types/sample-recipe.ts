@@ -64,7 +64,10 @@ export type SampleRecipe = typeof sampleResponse;
 
 export function isSampleRecipe(response: unknown): response is SampleRecipe {
   return (
-    typeof response === "object" && response !== null && "idMeal" in response
+    typeof response === "object" &&
+    response !== null &&
+    "idMeal" in response &&
+    !!response.idMeal
   );
 }
 

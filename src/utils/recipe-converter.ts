@@ -19,29 +19,19 @@ const getIngredients = (response: SampleRecipe): RecipeIngredient[] => {
 };
 
 export const convertRecipe = (response: unknown): Recipe | null => {
-  if (!response || typeof response !== "object") {
+  if (!response || typeof response !== "object" || !isSampleRecipe(response)) {
     return null;
   }
 
-  if (isSampleRecipe(response)) {
-    return {
-      id: response.idMeal,
-      name: response.strMeal,
-      category: response.strCategory,
-      area: response.strArea,
-      instructions: response.strInstructions,
-      thumbnail: response.strMealThumb,
-      tags: response.strTags?.split(",") || [],
-      youtube: response.strYoutube,
-      ingredients: getIngredients(response),
-    };
-  }
-
-  return null;
-};
-
-export const convertRecipeList = (responses: unknown[]): Recipe[] => {
-  return responses
-    .map(convertRecipe)
-    .filter((recipe): recipe is Recipe => recipe !== null);
+  return {
+    id: response.idMeal,
+    name: response.strMeal,
+    category: response.strCategory,
+    area: response.strArea,
+    instructions: response.strInstructions,
+    thumbnail: response.strMealThumb,
+    tags: response.strTags?.split(",") || [],
+    youtube: response.strYoutube,
+    ingredients: getIngredients(response),
+  };
 };
