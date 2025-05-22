@@ -6,6 +6,7 @@ import { AxiosError } from "axios";
 
 const initialState: CacheState = {
   ingridientCache: {},
+  recipeCache: {},
   keywordsCache: {},
   ingridients: [],
   fetchingIngridients: false,
@@ -16,6 +17,15 @@ export const cacheSlice = createSlice({
   name: "_cache",
   initialState,
   reducers: {
+    updateRecipeCache: (state, action: PayloadAction<Recipe>) => {
+      return {
+        ...state,
+        recipeCache: {
+          ...state.recipeCache,
+          [action.payload.id]: action.payload,
+        },
+      };
+    },
     setFetchingIngridients: (state) => {
       return {
         ...state,
@@ -78,6 +88,7 @@ export const {
   updateIngridientCache,
   updateKeywordsCache,
   setFetchingIngridients,
+  updateRecipeCache,
   setFetchingIngridientsError,
 } = cacheSlice.actions;
 
