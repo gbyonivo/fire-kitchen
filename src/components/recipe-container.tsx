@@ -5,6 +5,7 @@ import { useParams } from "next/navigation";
 import { Spinner } from "./common/spinner";
 import Image from "next/image";
 import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/solid";
+import { Ingredients } from "./ingredients";
 
 export function RecipeContainer() {
   const { id } = useParams();
@@ -46,18 +47,9 @@ export function RecipeContainer() {
               </div>
             </div>
             <div className="w-full md:w-4/6 md:h-5/6 border-l border-gray-300 px-8 overflow-y-auto">
-              <div className="flex flex-col gap-4">
-                <p className="text-sm font-bold text-gray-500">Ingredients</p>
-                <div className="grid grid-cols-2 gap-2">
-                  {recipe.ingredients.map((ingredient) => (
-                    <span key={ingredient.name} className="text-sm text-left">
-                      {ingredient.measure} {ingredient.name}
-                    </span>
-                  ))}
-                </div>
-                <p className="text-sm font-bold text-gray-500">Instructions</p>
-                <p className="text-sm text-left pb-24">{recipe.instructions}</p>
-              </div>
+              <Ingredients recipe={recipe} className="mb-8" />
+              <p className="text-sm font-bold text-gray-500">Instructions</p>
+              <p className="text-sm text-left pb-24">{recipe.instructions}</p>
             </div>
           </div>
         </div>

@@ -17,12 +17,16 @@ export const convertIngredient = (
 
 export const convertIngredientList = (
   ingredients: SampleIngredient[]
-): Ingredient[] => {
-  return ingredients.reduce<Ingredient[]>((acc, ingredient) => {
+): { list: Ingredient[]; record: Record<string, Ingredient> } => {
+  const record: Record<string, Ingredient> = {};
+  const list = ingredients.reduce<Ingredient[]>((acc, ingredient) => {
     const converted = convertIngredient(ingredient);
     if (converted) {
       acc.push(converted);
+      record[converted.ingredient] = converted;
     }
     return acc;
   }, []);
+
+  return { list, record };
 };

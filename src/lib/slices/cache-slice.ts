@@ -7,7 +7,6 @@ import { AxiosError } from "axios";
 const initialState: CacheState = {
   ingridientCache: {},
   recipeCache: {},
-  keywordsCache: {},
   ingridients: [],
   fetchingIngridients: false,
   fetchingIngridientsError: null,
@@ -43,40 +42,26 @@ export const cacheSlice = createSlice({
         fetchingIngridients: false,
       };
     },
-    setIngridients: (state, action: PayloadAction<Ingredient[]>) => {
+    setIngridients: (
+      state,
+      action: PayloadAction<{
+        list: Ingredient[];
+        record: Record<string, Ingredient>;
+      }>
+    ) => {
       return {
         ...state,
-        ingridients: action.payload,
+        ingridients: action.payload.list,
+        ingridientCache: action.payload.record,
         fetchingIngridients: false,
       };
     },
-    updateIngridientCache: (
-      state,
-      action: PayloadAction<{
-        ingredient: string;
-        recipes: Recipe[];
-      }>
-    ) => {
+    updateIngridientCache: (state, action: PayloadAction<Ingredient>) => {
       return {
         ...state,
         ingridientCache: {
           ...state.ingridientCache,
-          [action.payload.ingredient]: action.payload.recipes,
-        },
-      };
-    },
-    updateKeywordsCache: (
-      state,
-      action: PayloadAction<{
-        keyword: string;
-        recipes: Recipe[];
-      }>
-    ) => {
-      return {
-        ...state,
-        keywordsCache: {
-          ...state.keywordsCache,
-          [action.payload.keyword]: action.payload.recipes,
+          [action.payload.id]: action.payload,
         },
       };
     },
@@ -86,7 +71,6 @@ export const cacheSlice = createSlice({
 export const {
   setIngridients,
   updateIngridientCache,
-  updateKeywordsCache,
   setFetchingIngridients,
   updateRecipeCache,
   setFetchingIngridientsError,

@@ -12,19 +12,47 @@ import { RootState } from "@/lib/store";
 import { RecipeCard } from "./common/recipe-card";
 import { Spinner } from "./common/spinner";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
+import { useSearchParams } from "next/navigation";
+import { createQueryString } from "@/utils/common";
 
 export function SearchContainer() {
+  const pathname = usePathname();
+  const router = useRouter();
+  const searchParams = useSearchParams();
   const { recipes, searching } = useSelector(
     (state: RootState) => state.search
   );
   const { searchRecipe } = useSearch();
-  const { ingridients } = useIngridients();
-  const [selectedIngredients, setSelectedIngredients] = useState<Ingredient[]>(
-    []
-  );
-  const [search, setSearch] = useState("");
+  const { ingridients, ingridientCache } = useIngridients();
+  const getIngridients = () => {
+    return (
+      searchParams
+        .get("ingredients")
+        ?.split(",")
+        .map((ingredient) => ingridientCache?.[ingredient]) || []
+    );
+  };
+  const [selectedIngredients, setSelectedIngredients] =
+    useState<Ingredient[]>(getIngridients);
+  const [search, setSearch] = useState(searchParams.get("search") || "");
 
   const handleSearch = () => {
+    router.push(
+      pathname +
+        "?" +
+        createQueryString({
+          nameValuePairs: [
+            { name: "search", value: search },
+            {
+              name: "ingredients",
+              value: selectedIngredients.map((i) => i.ingredient).join(","),
+            },
+          ],
+          searchParams,
+        })
+    );
     searchRecipe(selectedIngredients, search);
   };
 
@@ -37,7 +65,7 @@ export function SearchContainer() {
           onChange={(ingredients) => setSelectedIngredients(ingredients)}
           getLabel={(ingredient) => ingredient.ingredient}
           getSearchKey={(ingredient) => ingredient.ingredient}
-          getKey={(ingredient) => ingredient.id}
+          getKey={(ingredient) => ingredient.ingredient}
           containerClassName="lg:w-96"
           label="Ingredients"
         />
@@ -52,16 +80,13 @@ export function SearchContainer() {
           className="self-start mt-2 lg:mt-6"
           onClick={handleSearch}
           disabled={searching}
-          loading={searching}
         >
           Search
         </Button>
       </div>
-      {searching && (
-        <div className="flex justify-center items-center h-full">
-          <Spinner size="large" />
-        </div>
-      )}
+      <div className="flex justify-center items-center h-16">
+        {searching && <Spinner size="large" />}
+      </div>
       <div className="flex-1 grid grid-cols-2 gap-2 md:gap-16 md:grid-cols-4 lg:grid-cols-6 py-8">
         {recipes.map((recipe) => {
           return (

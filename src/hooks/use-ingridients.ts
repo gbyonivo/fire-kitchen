@@ -20,9 +20,14 @@ export function useIngridients(): {
   fetching: boolean;
   error: AxiosError | string | null;
   fetchIngridients: () => void;
+  ingridientCache: Record<string, Ingredient>;
 } {
-  const { ingridients, fetchingIngridients, fetchingIngridientsError } =
-    useSelector((state: RootState) => state.cache);
+  const {
+    ingridients,
+    fetchingIngridients,
+    fetchingIngridientsError,
+    ingridientCache,
+  } = useSelector((state: RootState) => state.cache);
   const dispatch = useDispatch();
 
   const fetchIngridients = useCallback(() => {
@@ -61,5 +66,6 @@ export function useIngridients(): {
     fetchIngridients,
     fetching: fetchingIngridients,
     error: fetchingIngridientsError,
+    ingridientCache,
   };
 }
