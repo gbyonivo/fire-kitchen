@@ -14,7 +14,6 @@ export function useRecipe({ recipeId }: { recipeId: string }) {
   const recipeCache = useSelector(
     (state: RootState) => state.cache.recipeCache
   );
-  console.log(recipeCache);
   const recipe = recipeCache?.[recipeId];
 
   const fetchRecipe = useCallback(() => {

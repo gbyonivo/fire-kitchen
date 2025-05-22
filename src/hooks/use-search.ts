@@ -48,8 +48,6 @@ export function useSearch() {
           };
         }, {});
 
-        console.log(recipes.length, Object.values(uniqueRecipes));
-
         dispatch(searchSuccess(Object.values(uniqueRecipes)));
       } catch (error) {
         console.error(error);

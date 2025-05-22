@@ -31,10 +31,8 @@ export function useIngridients(): {
   const dispatch = useDispatch();
 
   const fetchIngridients = useCallback(() => {
-    console.log("fetching ingridients 1");
     dispatch(setFetchingIngridients());
     const fetch = async () => {
-      console.log("fetching ingridients 2");
       try {
         const response = await KitchenAxios.get("list.php?i=list");
         const data = (await response.data) as { meals: unknown[] };
@@ -57,7 +55,6 @@ export function useIngridients(): {
 
   useEffect(() => {
     if (ingridients.length > 0 || fetchingIngridients) return;
-    console.log("fetching ingridients");
     fetchIngridients();
   }, [fetchIngridients, ingridients, fetchingIngridients]);
 

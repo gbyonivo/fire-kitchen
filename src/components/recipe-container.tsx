@@ -11,7 +11,6 @@ export function RecipeContainer() {
   const { id } = useParams();
   const { recipe, loading, error } = useRecipe({ recipeId: id as string });
 
-  console.log(recipe, loading, error);
   return (
     <div className="flex w-screen h-screen justify-center py-16">
       {loading && <Spinner size="large" />}

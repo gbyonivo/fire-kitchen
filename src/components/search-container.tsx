@@ -2,7 +2,7 @@
 
 import { Button } from "./common/button";
 import { MultiSelect } from "./common/multi-select";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useIngridients } from "@/hooks/use-ingridients";
 import { Ingredient } from "@/types/ingredient";
 import { TextInput } from "./common/text-input";
@@ -37,24 +37,31 @@ export function SearchContainer() {
   const [selectedIngredients, setSelectedIngredients] =
     useState<Ingredient[]>(getIngridients);
   const [search, setSearch] = useState(searchParams.get("search") || "");
+  const [usedParams, setUsedParams] = useState<{
+    search: string;
+    ingridients: Ingredient[];
+  }>(() => ({
+    search: searchParams.get("search") || "",
+    ingridients: getIngridients(),
+  }));
 
-  const handleSearch = () => {
+  useEffect(() => {
     router.push(
       pathname +
         "?" +
         createQueryString({
           nameValuePairs: [
-            { name: "search", value: search },
+            { name: "search", value: usedParams.search },
             {
               name: "ingredients",
-              value: selectedIngredients.map((i) => i.ingredient).join(","),
+              value: usedParams.ingridients.map((i) => i.ingredient).join(","),
             },
           ],
           searchParams,
         })
     );
-    searchRecipe(selectedIngredients, search);
-  };
+    searchRecipe(usedParams.ingridients, usedParams.search);
+  }, [pathname, router, searchParams, searchRecipe, usedParams]);
 
   return (
     <div className="flex flex-col">
@@ -78,7 +85,9 @@ export function SearchContainer() {
         />
         <Button
           className="self-start mt-2 lg:mt-6"
-          onClick={handleSearch}
+          onClick={() =>
+            setUsedParams({ search, ingridients: selectedIngredients })
+          }
           disabled={searching}
         >
           Search
