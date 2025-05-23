@@ -21,7 +21,7 @@ A modern web application built with Next.js 15, React 19, and TypeScript, featur
 1. Clone the repository:
 
 ```bash
-git clone [your-repository-url]
+git clone
 cd fire-kitchen
 ```
 
@@ -58,6 +58,7 @@ src/
 - `yarn build` - Build the application for production
 - `yarn start` - Start the production server
 - `yarn lint` - Run ESLint for code quality
+- `yarn test` - Test App
 
 ## 🛠️ Tech Stack
 
@@ -69,6 +70,7 @@ src/
 - **Styling**: Tailwind CSS
 - **HTTP Client**: Axios
 - **Development**: ESLint, Turbopack
+- **Test**: Jest
 
 ## 📝 License
 

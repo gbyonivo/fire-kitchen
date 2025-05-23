@@ -2,7 +2,7 @@ import { Recipe } from "@/types/recipe";
 import { SidePanel } from "./common/side-panel";
 import { useState } from "react";
 import { Ingredient } from "@/types/ingredient";
-import { useIngridients } from "@/hooks/use-ingredients";
+import { useIngredients } from "@/hooks/use-ingredients";
 import clsx from "clsx";
 
 interface IngredientsProps {
@@ -11,7 +11,7 @@ interface IngredientsProps {
 }
 
 export function Ingredients({ recipe, className }: IngredientsProps) {
-  const { ingridientCache } = useIngridients();
+  const { ingridientCache } = useIngredients();
   const [selectedIngredient, setSelectedIngredient] =
     useState<Ingredient | null>(null);
   const handleClose = () => {
@@ -25,6 +25,7 @@ export function Ingredients({ recipe, className }: IngredientsProps) {
         {recipe.ingredients.map((ingredient) => (
           <span
             key={`${ingredient.name}-${ingredient.measure}`}
+            data-testid={`ingredient-${ingredient.name}-${ingredient.measure}`}
             className={clsx(
               "text-sm text-left",
               ingridientCache[ingredient.name]

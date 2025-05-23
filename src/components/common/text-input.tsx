@@ -11,6 +11,7 @@ interface TextInputProps {
   onChange: (value: string) => void;
   value: string;
   disabled?: boolean;
+  testId?: string;
 }
 
 export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
@@ -23,11 +24,12 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
       onChange,
       disabled,
       value,
+      testId,
     }: TextInputProps,
     ref
   ) {
     return (
-      <div className={clsx(containerClassName)}>
+      <div className={clsx(containerClassName)} data-testid={testId}>
         <Field>
           {label && (
             <Label className="block text-sm/6 font-medium text-gray-400">

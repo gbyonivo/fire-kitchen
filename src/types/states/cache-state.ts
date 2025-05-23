@@ -5,7 +5,7 @@ import { Recipe } from "../recipe";
 export interface CacheState {
   ingridientCache: Record<string, Ingredient>;
   recipeCache: Record<string, Recipe>;
-  ingridients: Ingredient[];
-  fetchingIngridients: boolean;
-  fetchingIngridientsError: AxiosError | string | null;
+  ingredients: Ingredient[];
+  fetchingIngredients: boolean;
+  fetchingIngredientsError: AxiosError | string | null;
 }

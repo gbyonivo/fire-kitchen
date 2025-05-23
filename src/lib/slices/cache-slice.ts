@@ -7,9 +7,9 @@ import { AxiosError } from "axios";
 const initialState: CacheState = {
   ingridientCache: {},
   recipeCache: {},
-  ingridients: [],
-  fetchingIngridients: false,
-  fetchingIngridientsError: null,
+  ingredients: [],
+  fetchingIngredients: false,
+  fetchingIngredientsError: null,
 };
 
 export const cacheSlice = createSlice({
@@ -25,24 +25,24 @@ export const cacheSlice = createSlice({
         },
       };
     },
-    setFetchingIngridients: (state) => {
+    setFetchingIngredients: (state) => {
       return {
         ...state,
-        fetchingIngridients: true,
-        fetchingIngridientsError: null,
+        fetchingIngredients: true,
+        fetchingIngredientsError: null,
       };
     },
-    setFetchingIngridientsError: (
+    setFetchingIngredientsError: (
       state,
       action: PayloadAction<AxiosError | string>
     ) => {
       return {
         ...state,
-        fetchingIngridientsError: action.payload,
-        fetchingIngridients: false,
+        fetchingIngredientsError: action.payload,
+        fetchingIngredients: false,
       };
     },
-    setIngridients: (
+    setIngredients: (
       state,
       action: PayloadAction<{
         list: Ingredient[];
@@ -51,9 +51,9 @@ export const cacheSlice = createSlice({
     ) => {
       return {
         ...state,
-        ingridients: action.payload.list,
+        ingredients: action.payload.list,
         ingridientCache: action.payload.record,
-        fetchingIngridients: false,
+        fetchingIngredients: false,
       };
     },
     updateIngridientCache: (state, action: PayloadAction<Ingredient>) => {
@@ -69,11 +69,11 @@ export const cacheSlice = createSlice({
 });
 
 export const {
-  setIngridients,
+  setIngredients,
   updateIngridientCache,
-  setFetchingIngridients,
+  setFetchingIngredients,
   updateRecipeCache,
-  setFetchingIngridientsError,
+  setFetchingIngredientsError,
 } = cacheSlice.actions;
 
 export default cacheSlice.reducer;

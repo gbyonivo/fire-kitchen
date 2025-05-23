@@ -1,7 +1,7 @@
 import {
-  setFetchingIngridients,
-  setFetchingIngridientsError,
-  setIngridients,
+  setFetchingIngredients,
+  setFetchingIngredientsError,
+  setIngredients,
 } from "@/lib/slices/cache-slice";
 import { RootState } from "@/lib/store";
 import {
@@ -16,22 +16,22 @@ import { useCallback, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 export function useIngredients(): {
-  ingridients: Ingredient[];
+  ingredients: Ingredient[];
   fetching: boolean;
   error: AxiosError | string | null;
-  fetchIngridients: () => void;
+  fetchIngredients: () => void;
   ingridientCache: Record<string, Ingredient>;
 } {
   const {
-    ingridients,
-    fetchingIngridients,
-    fetchingIngridientsError,
+    ingredients,
+    fetchingIngredients,
+    fetchingIngredientsError,
     ingridientCache,
   } = useSelector((state: RootState) => state.cache);
   const dispatch = useDispatch();
 
-  const fetchIngridients = useCallback(() => {
-    dispatch(setFetchingIngridients());
+  const fetchIngredients = useCallback(() => {
+    dispatch(setFetchingIngredients());
     const fetch = async () => {
       try {
         const response = await KitchenAxios.get("list.php?i=list");
@@ -39,30 +39,30 @@ export function useIngredients(): {
 
         if (isSampleIngredient(data.meals?.[0])) {
           dispatch(
-            setIngridients(
+            setIngredients(
               convertIngredientList(data.meals as unknown as SampleIngredient[])
             )
           );
         } else {
-          dispatch(setFetchingIngridientsError("Invalid data"));
+          dispatch(setFetchingIngredientsError("Invalid data"));
         }
       } catch (e) {
-        dispatch(setFetchingIngridientsError(e as AxiosError));
+        dispatch(setFetchingIngredientsError(e as AxiosError));
       }
     };
     fetch();
   }, [dispatch]);
 
   useEffect(() => {
-    if (ingridients.length > 0 || fetchingIngridients) return;
-    fetchIngridients();
-  }, [fetchIngridients, ingridients, fetchingIngridients]);
+    if (ingredients.length > 0 || fetchingIngredients) return;
+    fetchIngredients();
+  }, [fetchIngredients, ingredients, fetchingIngredients]);
 
   return {
-    ingridients,
-    fetchIngridients,
-    fetching: fetchingIngridients,
-    error: fetchingIngridientsError,
+    ingredients,
+    fetchIngredients,
+    fetching: fetchingIngredients,
+    error: fetchingIngredientsError,
     ingridientCache,
   };
 }

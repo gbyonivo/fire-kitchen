@@ -1,0 +1,111 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Ingredients { 'Name Test': [Object] } should match snapshot 1`] = `
+<div>
+  <div
+    class="flex flex-col gap-4 undefined"
+  >
+    <p
+      class="text-sm font-bold text-gray-500"
+    >
+      Ingredients
+    </p>
+    <div
+      class="grid grid-cols-2 gap-2"
+    >
+      <span
+        class="text-sm text-left hover:underline cursor-pointer"
+        data-testid="ingredient-Name Test-Measure Test"
+        role="button"
+      >
+        Measure Test
+         
+        Name Test
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Ingredients { 'Name Test': [Object] } should match snapshot after ingredient is clicked 1`] = `
+<div
+  aria-hidden="true"
+>
+  <div
+    class="flex flex-col gap-4 undefined"
+  >
+    <p
+      class="text-sm font-bold text-gray-500"
+    >
+      Ingredients
+    </p>
+    <div
+      class="grid grid-cols-2 gap-2"
+    >
+      <span
+        class="text-sm text-left hover:underline cursor-pointer"
+        data-testid="ingredient-Name Test-Measure Test"
+        role="button"
+      >
+        Measure Test
+         
+        Name Test
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Ingredients {} should match snapshot 1`] = `
+<div>
+  <div
+    class="flex flex-col gap-4 undefined"
+  >
+    <p
+      class="text-sm font-bold text-gray-500"
+    >
+      Ingredients
+    </p>
+    <div
+      class="grid grid-cols-2 gap-2"
+    >
+      <span
+        class="text-sm text-left text-gray-100/50"
+        data-testid="ingredient-Name Test-Measure Test"
+        role="button"
+      >
+        Measure Test
+         
+        Name Test
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Ingredients {} should match snapshot after ingredient is clicked 1`] = `
+<div>
+  <div
+    class="flex flex-col gap-4 undefined"
+  >
+    <p
+      class="text-sm font-bold text-gray-500"
+    >
+      Ingredients
+    </p>
+    <div
+      class="grid grid-cols-2 gap-2"
+    >
+      <span
+        class="text-sm text-left text-gray-100/50"
+        data-testid="ingredient-Name Test-Measure Test"
+        role="button"
+      >
+        Measure Test
+         
+        Name Test
+      </span>
+    </div>
+  </div>
+</div>
+`;

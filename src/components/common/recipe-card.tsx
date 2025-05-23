@@ -2,13 +2,15 @@ import { Recipe } from "@/types/recipe";
 import Image from "next/image";
 interface RecipeCardProps {
   recipe: Recipe;
+  id?: string;
 }
 
-export function RecipeCard({ recipe }: RecipeCardProps) {
+export function RecipeCard({ recipe, id }: RecipeCardProps) {
   return (
     <div
       className="bg-black rounded-xl border border-white/10 flex cursor-pointer 
     flex-col transition-all duration-300 hover:scale-105"
+      data-testid={id}
     >
       <Image
         src={recipe.thumbnail}

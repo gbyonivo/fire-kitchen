@@ -15,8 +15,8 @@ const rootPersistConfig = {
 const cachePersistConfig = {
   key: "cache",
   storage,
-  whitelist: ["ingridients", "ingridientCache", "keywordsCache", "recipeCache"],
-  blacklist: ["fetchingIngridients", "fetchingIngridientsError"],
+  whitelist: ["ingredients", "ingridientCache", "keywordsCache", "recipeCache"],
+  blacklist: ["fetchingIngredients", "fetchingIngredientsError"],
 };
 
 const rootReducer = combineReducers({

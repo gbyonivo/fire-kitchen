@@ -10,7 +10,7 @@ import clsx from "clsx";
 import { TextInput } from "./text-input";
 import { useMemo, useState } from "react";
 
-interface MultiSelectProps<T> {
+export interface MultiSelectProps<T> {
   options: T[];
   selectedOptions: T[];
   onChange: (options: T[]) => void;

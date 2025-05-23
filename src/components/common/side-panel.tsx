@@ -8,11 +8,23 @@ interface SidePanelProps {
   children: React.ReactNode;
   open: boolean;
   onClose: () => void;
+  id?: string;
 }
 
-export function SidePanel({ title, children, open, onClose }: SidePanelProps) {
+export function SidePanel({
+  title,
+  children,
+  open,
+  onClose,
+  id,
+}: SidePanelProps) {
   return (
-    <Dialog open={open} onClose={onClose} className="relative z-10">
+    <Dialog
+      open={open}
+      onClose={onClose}
+      className="relative z-10"
+      data-testid={id}
+    >
       <div className="fixed inset-0" />
 
       <div className="fixed inset-0 overflow-hidden">

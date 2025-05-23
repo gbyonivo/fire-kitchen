@@ -12,7 +12,10 @@ export function RecipeContainer() {
   const { recipe, loading, error } = useRecipe({ recipeId: id as string });
 
   return (
-    <div className="flex w-screen h-screen justify-center py-16">
+    <div
+      className="flex w-screen h-screen justify-center py-16"
+      data-testid="recipe-container"
+    >
       {loading && <Spinner size="large" />}
       {error && <div>Error: {error.message}</div>}
       {recipe && (
