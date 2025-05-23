@@ -21,7 +21,7 @@ A modern web application built with Next.js 15, React 19, and TypeScript, featur
 1. Clone the repository:
 
 ```bash
-git clone
+git clone git@github.com:gbyonivo/fire-kitchen.git
 cd fire-kitchen
 ```
 
