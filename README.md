@@ -28,7 +28,7 @@ cd fire-kitchen
 2. Install dependencies:
 
 ```bash
-yarn install
+yarn
 ```
 
 3. Start the development server:
