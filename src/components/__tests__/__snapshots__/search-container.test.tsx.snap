@@ -1,0 +1,325 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchContainer should match snapshot and button should be disabled when searching 1`] = `
+<div>
+  <div
+    class="flex flex-col"
+  >
+    <div
+      class="pt-8 flex flex-col lg:flex-row gap-2 justify-center"
+    >
+      <div
+        class="lg:w-96"
+      >
+        <label
+          class="block text-sm/6 font-medium text-gray-400"
+          data-headlessui-state=""
+          for="headlessui-listbox-button-«rn»"
+          id="headlessui-label-«rm»"
+        >
+          Ingredients
+        </label>
+        <button
+          aria-expanded="false"
+          aria-haspopup="listbox"
+          aria-labelledby="headlessui-label-«rm» headlessui-listbox-button-«rn»"
+          class="relative block w-full rounded-lg bg-white/5 py-1.5 pr-8 pl-3 text-left text-sm/6 text-white min-h-10 focus:not-data-focus:outline-none data-focus:outline-2 data-focus:-outline-offset-2 data-focus:outline-white/25"
+          data-headlessui-state=""
+          id="headlessui-listbox-button-«rn»"
+          type="button"
+        >
+          <div
+            class="flex flex-wrap gap-2"
+          />
+          <svg
+            aria-hidden="true"
+            class="group pointer-events-none absolute top-2.5 right-2.5 size-4 fill-white/60"
+            data-slot="icon"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </button>
+      </div>
+      <div
+        class="lg:w-64"
+      >
+        <div
+          data-headlessui-state=""
+        >
+          <label
+            class="block text-sm/6 font-medium text-gray-400"
+            data-headlessui-state=""
+            for="headlessui-control-«rr»"
+            id="headlessui-label-«rs»"
+          >
+            Keyword (at least 2 characters)
+          </label>
+          <input
+            aria-labelledby="headlessui-label-«rs»"
+            class="h-10 block w-full rounded-lg border-none bg-white/5 px-3 py-1.5 text-sm/6 text-white focus:not-data-focus:outline-none data-focus:outline-2 data-focus:-outline-offset-2 data-focus:outline-white/25"
+            data-disabled=""
+            data-headlessui-state="disabled"
+            disabled=""
+            id="headlessui-control-«rr»"
+            value=""
+          />
+          <span
+            hidden=""
+            style="position: fixed; top: 1px; left: 1px; width: 1px; height: 0px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px; display: none;"
+          />
+        </div>
+      </div>
+      <button
+        class="inline-flex items-center gap-2 rounded-md 
+        px-3 py-1.5 text-sm/6 font-semibold  shadow-inner 
+        shadow-white/10 focus:not-data-focus:outline-none data-focus:outline 
+        data-focus:outline-white  bg-gray-600 data-open:bg-gray-600 text-gray-400 self-start mt-2 lg:mt-6"
+        data-disabled=""
+        data-headlessui-state="disabled"
+        data-testid="search-button"
+        disabled=""
+        type="button"
+      >
+        <div
+          class="flex items-center gap-2"
+        >
+          Search
+        </div>
+      </button>
+    </div>
+    <div
+      class="flex justify-center items-center h-16"
+    >
+      <div>
+        <svg
+          aria-hidden="true"
+          class="animate-spin text-red-500 undefined w-16 h-16"
+          data-slot="icon"
+          fill="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            clip-rule="evenodd"
+            d="M12.963 2.286a.75.75 0 0 0-1.071-.136 9.742 9.742 0 0 0-3.539 6.176 7.547 7.547 0 0 1-1.705-1.715.75.75 0 0 0-1.152-.082A9 9 0 1 0 15.68 4.534a7.46 7.46 0 0 1-2.717-2.248ZM15.75 14.25a3.75 3.75 0 1 1-7.313-1.172c.628.465 1.35.81 2.133 1a5.99 5.99 0 0 1 1.925-3.546 3.75 3.75 0 0 1 3.255 3.718Z"
+            fill-rule="evenodd"
+          />
+        </svg>
+      </div>
+    </div>
+    <div
+      class="flex-1 grid grid-cols-2 gap-2 md:gap-16 md:grid-cols-4 lg:grid-cols-6 py-8"
+    />
+  </div>
+</div>
+`;
+
+exports[`SearchContainer should match snapshot and onSetParams should be called when search button is clicked 1`] = `
+<div>
+  <div
+    class="flex flex-col"
+  >
+    <div
+      class="pt-8 flex flex-col lg:flex-row gap-2 justify-center"
+    >
+      <div
+        class="lg:w-96"
+      >
+        <label
+          class="block text-sm/6 font-medium text-gray-400"
+          data-headlessui-state=""
+          for="headlessui-listbox-button-«r3»"
+          id="headlessui-label-«r2»"
+        >
+          Ingredients
+        </label>
+        <button
+          aria-expanded="false"
+          aria-haspopup="listbox"
+          aria-labelledby="headlessui-label-«r2» headlessui-listbox-button-«r3»"
+          class="relative block w-full rounded-lg bg-white/5 py-1.5 pr-8 pl-3 text-left text-sm/6 text-white min-h-10 focus:not-data-focus:outline-none data-focus:outline-2 data-focus:-outline-offset-2 data-focus:outline-white/25"
+          data-headlessui-state=""
+          id="headlessui-listbox-button-«r3»"
+          type="button"
+        >
+          <div
+            class="flex flex-wrap gap-2"
+          />
+          <svg
+            aria-hidden="true"
+            class="group pointer-events-none absolute top-2.5 right-2.5 size-4 fill-white/60"
+            data-slot="icon"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </button>
+      </div>
+      <div
+        class="lg:w-64"
+      >
+        <div
+          data-headlessui-state=""
+        >
+          <label
+            class="block text-sm/6 font-medium text-gray-400"
+            data-headlessui-state=""
+            for="headlessui-control-«r7»"
+            id="headlessui-label-«r8»"
+          >
+            Keyword (at least 2 characters)
+          </label>
+          <input
+            aria-labelledby="headlessui-label-«r8»"
+            class="h-10 block w-full rounded-lg border-none bg-white/5 px-3 py-1.5 text-sm/6 text-white focus:not-data-focus:outline-none data-focus:outline-2 data-focus:-outline-offset-2 data-focus:outline-white/25"
+            data-headlessui-state=""
+            id="headlessui-control-«r7»"
+            value="Chicken"
+          />
+          <span
+            hidden=""
+            style="position: fixed; top: 1px; left: 1px; width: 1px; height: 0px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px; display: none;"
+          />
+        </div>
+      </div>
+      <button
+        class="inline-flex items-center gap-2 rounded-md 
+        px-3 py-1.5 text-sm/6 font-semibold  shadow-inner 
+        shadow-white/10 focus:not-data-focus:outline-none data-focus:outline 
+        data-focus:outline-white  bg-gray-800 data-hover:bg-gray-700 data-open:bg-gray-800 text-white self-start mt-2 lg:mt-6"
+        data-focus=""
+        data-headlessui-state="focus"
+        data-testid="search-button"
+        type="button"
+      >
+        <div
+          class="flex items-center gap-2"
+        >
+          Search
+        </div>
+      </button>
+    </div>
+    <div
+      class="flex justify-center items-center h-16"
+    />
+    <div
+      class="flex-1 grid grid-cols-2 gap-2 md:gap-16 md:grid-cols-4 lg:grid-cols-6 py-8"
+    />
+  </div>
+</div>
+`;
+
+exports[`SearchContainer should match snapshot and onSetParams should be called when search button is clicked 2`] = `
+<div>
+  <div
+    class="flex flex-col"
+  >
+    <div
+      class="pt-8 flex flex-col lg:flex-row gap-2 justify-center"
+    >
+      <div
+        class="lg:w-96"
+      >
+        <label
+          class="block text-sm/6 font-medium text-gray-400"
+          data-headlessui-state=""
+          for="headlessui-listbox-button-«rd»"
+          id="headlessui-label-«rc»"
+        >
+          Ingredients
+        </label>
+        <button
+          aria-expanded="false"
+          aria-haspopup="listbox"
+          aria-labelledby="headlessui-label-«rc» headlessui-listbox-button-«rd»"
+          class="relative block w-full rounded-lg bg-white/5 py-1.5 pr-8 pl-3 text-left text-sm/6 text-white min-h-10 focus:not-data-focus:outline-none data-focus:outline-2 data-focus:-outline-offset-2 data-focus:outline-white/25"
+          data-headlessui-state=""
+          id="headlessui-listbox-button-«rd»"
+          type="button"
+        >
+          <div
+            class="flex flex-wrap gap-2"
+          />
+          <svg
+            aria-hidden="true"
+            class="group pointer-events-none absolute top-2.5 right-2.5 size-4 fill-white/60"
+            data-slot="icon"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </button>
+      </div>
+      <div
+        class="lg:w-64"
+      >
+        <div
+          data-headlessui-state=""
+        >
+          <label
+            class="block text-sm/6 font-medium text-gray-400"
+            data-headlessui-state=""
+            for="headlessui-control-«rh»"
+            id="headlessui-label-«ri»"
+          >
+            Keyword (at least 2 characters)
+          </label>
+          <input
+            aria-labelledby="headlessui-label-«ri»"
+            class="h-10 block w-full rounded-lg border-none bg-white/5 px-3 py-1.5 text-sm/6 text-white focus:not-data-focus:outline-none data-focus:outline-2 data-focus:-outline-offset-2 data-focus:outline-white/25"
+            data-headlessui-state=""
+            id="headlessui-control-«rh»"
+            value=""
+          />
+          <span
+            hidden=""
+            style="position: fixed; top: 1px; left: 1px; width: 1px; height: 0px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px; display: none;"
+          />
+        </div>
+      </div>
+      <button
+        class="inline-flex items-center gap-2 rounded-md 
+        px-3 py-1.5 text-sm/6 font-semibold  shadow-inner 
+        shadow-white/10 focus:not-data-focus:outline-none data-focus:outline 
+        data-focus:outline-white  bg-gray-600 data-open:bg-gray-600 text-gray-400 self-start mt-2 lg:mt-6"
+        data-disabled=""
+        data-headlessui-state="disabled"
+        data-testid="search-button"
+        disabled=""
+        type="button"
+      >
+        <div
+          class="flex items-center gap-2"
+        >
+          Search
+        </div>
+      </button>
+    </div>
+    <div
+      class="flex justify-center items-center h-16"
+    />
+    <div
+      class="flex-1 grid grid-cols-2 gap-2 md:gap-16 md:grid-cols-4 lg:grid-cols-6 py-8"
+    />
+  </div>
+</div>
+`;

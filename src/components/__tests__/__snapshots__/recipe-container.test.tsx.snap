@@ -1,0 +1,449 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RecipeContainer {
+  recipe: [Object],
+  loading: false,
+  error: Error: Test
+      at /Users/orkumaivo/workspace/fire-kitchen/src/components/__tests__/recipe-container.test.tsx:63:16
+      at _dispatchDescribe (/Users/orkumaivo/workspace/fire-kitchen/node_modules/jest-circus/build/index.js:91:26)
+      at describe (/Users/orkumaivo/workspace/fire-kitchen/node_modules/jest-circus/build/index.js:55:5)
+      at Object.<anonymous> (/Users/orkumaivo/workspace/fire-kitchen/src/components/__tests__/recipe-container.test.tsx:49:1)
+      at Runtime._execModule (/Users/orkumaivo/workspace/fire-kitchen/node_modules/jest-runtime/build/index.js:1439:24)
+      at Runtime._loadModule (/Users/orkumaivo/workspace/fire-kitchen/node_modules/jest-runtime/build/index.js:1022:12)
+      at Runtime.requireModule (/Users/orkumaivo/workspace/fire-kitchen/node_modules/jest-runtime/build/index.js:882:12)
+      at jestAdapter (/Users/orkumaivo/workspace/fire-kitchen/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:77:13)
+      at async runTestInternal (/Users/orkumaivo/workspace/fire-kitchen/node_modules/jest-runner/build/runTest.js:367:16)
+      at async runTest (/Users/orkumaivo/workspace/fire-kitchen/node_modules/jest-runner/build/runTest.js:444:34)
+} should match snapshot 1`] = `
+<div>
+  <div
+    class="flex w-screen h-screen justify-center py-16"
+    data-testid="recipe-container"
+  >
+    <div>
+      Error: 
+      Test
+    </div>
+    <div
+      class="flex flex-col md:w-2/3 md:overflow-hidden"
+    >
+      <h1
+        class="text-2xl font-bold text-center mb-8"
+      >
+        Test
+      </h1>
+      <div
+        class="flex w-full flex-col md:flex-row"
+      >
+        <div
+          class="w-full md:w-2/6"
+        >
+          <div
+            class="flex justify-center"
+          >
+            <img
+              alt="Test"
+              class="self-center rounded-lg"
+              data-nimg="1"
+              decoding="async"
+              height="200"
+              loading="lazy"
+              src="/_next/image?url=%2Fimages%2Ftest.jpg&w=640&q=75"
+              srcset="/_next/image?url=%2Fimages%2Ftest.jpg&w=256&q=75 1x, /_next/image?url=%2Fimages%2Ftest.jpg&w=640&q=75 2x"
+              style="color: transparent;"
+              width="200"
+            />
+          </div>
+          <div
+            class="flex flex-col my-4 gap-4"
+          >
+            <p
+              class="text-sm text-center"
+            >
+              Test
+            </p>
+            <p
+              class="text-sm text-center"
+            >
+              Test
+            </p>
+            <p
+              class="text-sm text-center"
+            >
+              <a
+                class="underline"
+                href="Test"
+                rel="noreferrer"
+                target="_blank"
+              >
+                Watch on Youtube
+                 
+                <svg
+                  aria-hidden="true"
+                  class="w-4 h-4 inline ml-2"
+                  data-slot="icon"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M15.75 2.25H21a.75.75 0 0 1 .75.75v5.25a.75.75 0 0 1-1.5 0V4.81L8.03 17.03a.75.75 0 0 1-1.06-1.06L19.19 3.75h-3.44a.75.75 0 0 1 0-1.5Zm-10.5 4.5a1.5 1.5 0 0 0-1.5 1.5v10.5a1.5 1.5 0 0 0 1.5 1.5h10.5a1.5 1.5 0 0 0 1.5-1.5V10.5a.75.75 0 0 1 1.5 0v8.25a3 3 0 0 1-3 3H5.25a3 3 0 0 1-3-3V8.25a3 3 0 0 1 3-3h8.25a.75.75 0 0 1 0 1.5H5.25Z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </a>
+            </p>
+          </div>
+        </div>
+        <div
+          class="w-full md:w-4/6 md:h-5/6 border-l border-gray-300 px-8 overflow-y-auto"
+        >
+          <div
+            class="flex flex-col gap-4 mb-8"
+          >
+            <p
+              class="text-sm font-bold text-gray-500"
+            >
+              Ingredients
+            </p>
+            <div
+              class="grid grid-cols-2 gap-2"
+            >
+              <span
+                class="text-sm text-left text-gray-100/50"
+                data-testid="ingredient-Name Test-Measure Test"
+                role="button"
+              >
+                Measure Test
+                 
+                Name Test
+              </span>
+            </div>
+          </div>
+          <p
+            class="text-sm font-bold text-gray-500"
+          >
+            Instructions
+          </p>
+          <p
+            class="text-sm text-left pb-24"
+          >
+            Test
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`RecipeContainer {
+  recipe: null,
+  loading: false,
+  error: Error: Test
+      at /Users/orkumaivo/workspace/fire-kitchen/src/components/__tests__/recipe-container.test.tsx:71:16
+      at _dispatchDescribe (/Users/orkumaivo/workspace/fire-kitchen/node_modules/jest-circus/build/index.js:91:26)
+      at describe (/Users/orkumaivo/workspace/fire-kitchen/node_modules/jest-circus/build/index.js:55:5)
+      at Object.<anonymous> (/Users/orkumaivo/workspace/fire-kitchen/src/components/__tests__/recipe-container.test.tsx:49:1)
+      at Runtime._execModule (/Users/orkumaivo/workspace/fire-kitchen/node_modules/jest-runtime/build/index.js:1439:24)
+      at Runtime._loadModule (/Users/orkumaivo/workspace/fire-kitchen/node_modules/jest-runtime/build/index.js:1022:12)
+      at Runtime.requireModule (/Users/orkumaivo/workspace/fire-kitchen/node_modules/jest-runtime/build/index.js:882:12)
+      at jestAdapter (/Users/orkumaivo/workspace/fire-kitchen/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:77:13)
+      at async runTestInternal (/Users/orkumaivo/workspace/fire-kitchen/node_modules/jest-runner/build/runTest.js:367:16)
+      at async runTest (/Users/orkumaivo/workspace/fire-kitchen/node_modules/jest-runner/build/runTest.js:444:34)
+} should match snapshot 1`] = `
+<div>
+  <div
+    class="flex w-screen h-screen justify-center py-16"
+    data-testid="recipe-container"
+  >
+    <div>
+      Error: 
+      Test
+    </div>
+  </div>
+</div>
+`;
+
+exports[`RecipeContainer { recipe: [Object], loading: false, error: null } should match snapshot 1`] = `
+<div>
+  <div
+    class="flex w-screen h-screen justify-center py-16"
+    data-testid="recipe-container"
+  >
+    <div
+      class="flex flex-col md:w-2/3 md:overflow-hidden"
+    >
+      <h1
+        class="text-2xl font-bold text-center mb-8"
+      >
+        Test
+      </h1>
+      <div
+        class="flex w-full flex-col md:flex-row"
+      >
+        <div
+          class="w-full md:w-2/6"
+        >
+          <div
+            class="flex justify-center"
+          >
+            <img
+              alt="Test"
+              class="self-center rounded-lg"
+              data-nimg="1"
+              decoding="async"
+              height="200"
+              loading="lazy"
+              src="/_next/image?url=%2Fimages%2Ftest.jpg&w=640&q=75"
+              srcset="/_next/image?url=%2Fimages%2Ftest.jpg&w=256&q=75 1x, /_next/image?url=%2Fimages%2Ftest.jpg&w=640&q=75 2x"
+              style="color: transparent;"
+              width="200"
+            />
+          </div>
+          <div
+            class="flex flex-col my-4 gap-4"
+          >
+            <p
+              class="text-sm text-center"
+            >
+              Test
+            </p>
+            <p
+              class="text-sm text-center"
+            >
+              Test
+            </p>
+            <p
+              class="text-sm text-center"
+            >
+              <a
+                class="underline"
+                href="Test"
+                rel="noreferrer"
+                target="_blank"
+              >
+                Watch on Youtube
+                 
+                <svg
+                  aria-hidden="true"
+                  class="w-4 h-4 inline ml-2"
+                  data-slot="icon"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M15.75 2.25H21a.75.75 0 0 1 .75.75v5.25a.75.75 0 0 1-1.5 0V4.81L8.03 17.03a.75.75 0 0 1-1.06-1.06L19.19 3.75h-3.44a.75.75 0 0 1 0-1.5Zm-10.5 4.5a1.5 1.5 0 0 0-1.5 1.5v10.5a1.5 1.5 0 0 0 1.5 1.5h10.5a1.5 1.5 0 0 0 1.5-1.5V10.5a.75.75 0 0 1 1.5 0v8.25a3 3 0 0 1-3 3H5.25a3 3 0 0 1-3-3V8.25a3 3 0 0 1 3-3h8.25a.75.75 0 0 1 0 1.5H5.25Z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </a>
+            </p>
+          </div>
+        </div>
+        <div
+          class="w-full md:w-4/6 md:h-5/6 border-l border-gray-300 px-8 overflow-y-auto"
+        >
+          <div
+            class="flex flex-col gap-4 mb-8"
+          >
+            <p
+              class="text-sm font-bold text-gray-500"
+            >
+              Ingredients
+            </p>
+            <div
+              class="grid grid-cols-2 gap-2"
+            >
+              <span
+                class="text-sm text-left text-gray-100/50"
+                data-testid="ingredient-Name Test-Measure Test"
+                role="button"
+              >
+                Measure Test
+                 
+                Name Test
+              </span>
+            </div>
+          </div>
+          <p
+            class="text-sm font-bold text-gray-500"
+          >
+            Instructions
+          </p>
+          <p
+            class="text-sm text-left pb-24"
+          >
+            Test
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`RecipeContainer { recipe: [Object], loading: true, error: null } should match snapshot 1`] = `
+<div>
+  <div
+    class="flex w-screen h-screen justify-center py-16"
+    data-testid="recipe-container"
+  >
+    <div>
+      <svg
+        aria-hidden="true"
+        class="animate-spin text-red-500 undefined w-16 h-16"
+        data-slot="icon"
+        fill="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          clip-rule="evenodd"
+          d="M12.963 2.286a.75.75 0 0 0-1.071-.136 9.742 9.742 0 0 0-3.539 6.176 7.547 7.547 0 0 1-1.705-1.715.75.75 0 0 0-1.152-.082A9 9 0 1 0 15.68 4.534a7.46 7.46 0 0 1-2.717-2.248ZM15.75 14.25a3.75 3.75 0 1 1-7.313-1.172c.628.465 1.35.81 2.133 1a5.99 5.99 0 0 1 1.925-3.546 3.75 3.75 0 0 1 3.255 3.718Z"
+          fill-rule="evenodd"
+        />
+      </svg>
+    </div>
+    <div
+      class="flex flex-col md:w-2/3 md:overflow-hidden"
+    >
+      <h1
+        class="text-2xl font-bold text-center mb-8"
+      >
+        Test
+      </h1>
+      <div
+        class="flex w-full flex-col md:flex-row"
+      >
+        <div
+          class="w-full md:w-2/6"
+        >
+          <div
+            class="flex justify-center"
+          >
+            <img
+              alt="Test"
+              class="self-center rounded-lg"
+              data-nimg="1"
+              decoding="async"
+              height="200"
+              loading="lazy"
+              src="/_next/image?url=%2Fimages%2Ftest.jpg&w=640&q=75"
+              srcset="/_next/image?url=%2Fimages%2Ftest.jpg&w=256&q=75 1x, /_next/image?url=%2Fimages%2Ftest.jpg&w=640&q=75 2x"
+              style="color: transparent;"
+              width="200"
+            />
+          </div>
+          <div
+            class="flex flex-col my-4 gap-4"
+          >
+            <p
+              class="text-sm text-center"
+            >
+              Test
+            </p>
+            <p
+              class="text-sm text-center"
+            >
+              Test
+            </p>
+            <p
+              class="text-sm text-center"
+            >
+              <a
+                class="underline"
+                href="Test"
+                rel="noreferrer"
+                target="_blank"
+              >
+                Watch on Youtube
+                 
+                <svg
+                  aria-hidden="true"
+                  class="w-4 h-4 inline ml-2"
+                  data-slot="icon"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M15.75 2.25H21a.75.75 0 0 1 .75.75v5.25a.75.75 0 0 1-1.5 0V4.81L8.03 17.03a.75.75 0 0 1-1.06-1.06L19.19 3.75h-3.44a.75.75 0 0 1 0-1.5Zm-10.5 4.5a1.5 1.5 0 0 0-1.5 1.5v10.5a1.5 1.5 0 0 0 1.5 1.5h10.5a1.5 1.5 0 0 0 1.5-1.5V10.5a.75.75 0 0 1 1.5 0v8.25a3 3 0 0 1-3 3H5.25a3 3 0 0 1-3-3V8.25a3 3 0 0 1 3-3h8.25a.75.75 0 0 1 0 1.5H5.25Z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </a>
+            </p>
+          </div>
+        </div>
+        <div
+          class="w-full md:w-4/6 md:h-5/6 border-l border-gray-300 px-8 overflow-y-auto"
+        >
+          <div
+            class="flex flex-col gap-4 mb-8"
+          >
+            <p
+              class="text-sm font-bold text-gray-500"
+            >
+              Ingredients
+            </p>
+            <div
+              class="grid grid-cols-2 gap-2"
+            >
+              <span
+                class="text-sm text-left text-gray-100/50"
+                data-testid="ingredient-Name Test-Measure Test"
+                role="button"
+              >
+                Measure Test
+                 
+                Name Test
+              </span>
+            </div>
+          </div>
+          <p
+            class="text-sm font-bold text-gray-500"
+          >
+            Instructions
+          </p>
+          <p
+            class="text-sm text-left pb-24"
+          >
+            Test
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`RecipeContainer { recipe: null, loading: true, error: false } should match snapshot 1`] = `
+<div>
+  <div
+    class="flex w-screen h-screen justify-center py-16"
+    data-testid="recipe-container"
+  >
+    <div>
+      <svg
+        aria-hidden="true"
+        class="animate-spin text-red-500 undefined w-16 h-16"
+        data-slot="icon"
+        fill="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          clip-rule="evenodd"
+          d="M12.963 2.286a.75.75 0 0 0-1.071-.136 9.742 9.742 0 0 0-3.539 6.176 7.547 7.547 0 0 1-1.705-1.715.75.75 0 0 0-1.152-.082A9 9 0 1 0 15.68 4.534a7.46 7.46 0 0 1-2.717-2.248ZM15.75 14.25a3.75 3.75 0 1 1-7.313-1.172c.628.465 1.35.81 2.133 1a5.99 5.99 0 0 1 1.925-3.546 3.75 3.75 0 0 1 3.255 3.718Z"
+          fill-rule="evenodd"
+        />
+      </svg>
+    </div>
+  </div>
+</div>
+`;

@@ -1,36 +1,81 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Fire Kitchen
 
-## Getting Started
+A modern web application built with Next.js 15, React 19, and TypeScript, featuring a robust state management system using Redux Toolkit.
 
-First, run the development server:
+## 🚀 Features
+
+- **Modern Tech Stack**: Built with Next.js 15 and React 19
+- **Type Safety**: Full TypeScript support
+- **State Management**: Redux Toolkit with Redux Persist for state persistence
+- **UI Components**: Headless UI and Heroicons for beautiful, accessible components
+- **Styling**: Tailwind CSS for modern, utility-first styling
+- **Development**: ESLint for code quality and Turbopack for fast development
+
+## 📋 Prerequisites
+
+- Node.js (Latest LTS version recommended)
+- Yarn package manager
+
+## 🛠️ Installation
+
+1. Clone the repository:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone
+cd fire-kitchen
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+yarn install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+3. Start the development server:
 
-## Learn More
+```bash
+yarn dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+The application will be available at [http://localhost:3000](http://localhost:3000).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🏗️ Project Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+src/
+├── app/          # Next.js app directory
+├── components/   # Reusable React components
+├── hooks/        # Custom React hooks
+├── lib/          # Library code and configurations
+├── types/        # TypeScript type definitions
+├── utils/        # Utility functions
+└── assets/       # Static assets
+```
 
-## Deploy on Vercel
+## 🚀 Available Scripts
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- `yarn dev` - Start development server with Turbopack
+- `yarn build` - Build the application for production
+- `yarn start` - Start the production server
+- `yarn lint` - Run ESLint for code quality
+- `yarn test` - Test App
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 15
+- **UI Library**: React 19
+- **Language**: TypeScript
+- **State Management**: Redux Toolkit
+- **UI Components**: Headless UI, Heroicons
+- **Styling**: Tailwind CSS
+- **HTTP Client**: Axios
+- **Development**: ESLint, Turbopack
+- **Test**: Jest
+
+## 📝 License
+
+This project is private and proprietary.
+
+## 🤝 Contributing
+
+This is a private project. Please contact the maintainers for contribution guidelines.
