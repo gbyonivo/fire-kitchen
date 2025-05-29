@@ -26,7 +26,7 @@ export function useRecipe({ recipeId }: { recipeId: string }) {
             i: recipeId,
           },
         });
-        const recipe = convertRecipe(response.data.meals[0]);
+        const recipe = convertRecipe(response.data.meals?.[0]);
         if (recipe) {
           dispatch(updateRecipeCache(recipe));
         } else {
@@ -35,6 +35,7 @@ export function useRecipe({ recipeId }: { recipeId: string }) {
         setLoading(false);
       } catch (error) {
         setLoading(false);
+        console.log(error);
         setError(error as AxiosError);
       }
     };

@@ -2,7 +2,7 @@
 
 import { Button } from "./common/button";
 import { MultiSelect } from "./common/multi-select";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useIngredients } from "@/hooks/use-ingredients";
 import { Ingredient } from "@/types/ingredient";
 import { TextInput } from "./common/text-input";
@@ -15,6 +15,7 @@ import { useSearchControl } from "@/hooks/use-search-control";
 
 export function SearchContainer() {
   const { ingredients } = useIngredients();
+  const timeout = useRef<any>(null);
   const { onSetParams, initialIngredients, initialSearchValue } =
     useSearchControl();
   const { recipes, searching } = useSelector(
@@ -24,6 +25,20 @@ export function SearchContainer() {
     () => initialIngredients
   );
   const [search, setSearch] = useState(() => initialSearchValue);
+
+  useEffect(() => {
+    clearTimeout(timeout.current);
+    timeout.current = setTimeout(() => {
+      onSetParams({
+        search,
+        ingredients: selectedIngredients,
+      });
+
+      return () => {
+        clearTimeout(timeout.current);
+      };
+    }, 1000);
+  }, [selectedIngredients, search]);
 
   return (
     <div className="flex flex-col">

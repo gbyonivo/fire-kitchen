@@ -12,6 +12,7 @@ exports[`RecipeContainer {
       at Runtime._loadModule (/Users/orkumaivo/workspace/fire-kitchen/node_modules/jest-runtime/build/index.js:1022:12)
       at Runtime.requireModule (/Users/orkumaivo/workspace/fire-kitchen/node_modules/jest-runtime/build/index.js:882:12)
       at jestAdapter (/Users/orkumaivo/workspace/fire-kitchen/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:77:13)
+      at processTicksAndRejections (node:internal/process/task_queues:95:5)
       at async runTestInternal (/Users/orkumaivo/workspace/fire-kitchen/node_modules/jest-runner/build/runTest.js:367:16)
       at async runTest (/Users/orkumaivo/workspace/fire-kitchen/node_modules/jest-runner/build/runTest.js:444:34)
 } should match snapshot 1`] = `
@@ -150,6 +151,7 @@ exports[`RecipeContainer {
       at Runtime._loadModule (/Users/orkumaivo/workspace/fire-kitchen/node_modules/jest-runtime/build/index.js:1022:12)
       at Runtime.requireModule (/Users/orkumaivo/workspace/fire-kitchen/node_modules/jest-runtime/build/index.js:882:12)
       at jestAdapter (/Users/orkumaivo/workspace/fire-kitchen/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:77:13)
+      at processTicksAndRejections (node:internal/process/task_queues:95:5)
       at async runTestInternal (/Users/orkumaivo/workspace/fire-kitchen/node_modules/jest-runner/build/runTest.js:367:16)
       at async runTest (/Users/orkumaivo/workspace/fire-kitchen/node_modules/jest-runner/build/runTest.js:444:34)
 } should match snapshot 1`] = `

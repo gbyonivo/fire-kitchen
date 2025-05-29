@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 import { useRouter, useSearchParams } from "next/navigation";
 
@@ -14,15 +14,21 @@ export const useSearchControl = () => {
   const router = useRouter();
   const searchParams = useSearchParams();
   const { ingridientCache } = useIngredients();
+  const timeout = useRef(null);
   const { searchRecipe } = useSearch();
   const getIngredients = () => {
-    return (
-      searchParams
-        .get("ingredients")
-        ?.split(",")
-        .map((ingredient) => ingridientCache?.[ingredient]) || []
-    );
+    return searchParams
+      .get("ingredients")
+      ?.split(",")
+      .reduce((acc: Ingredient[], ingredient) => {
+        if (ingridientCache?.[ingredient]) {
+          return [...acc, ingridientCache?.[ingredient]];
+        }
+        return acc;
+      }, []);
   };
+
+  console.log(getIngredients());
 
   const [usedParams, setUsedParams] = useState<{
     search: string;

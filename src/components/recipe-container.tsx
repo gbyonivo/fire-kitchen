@@ -6,6 +6,7 @@ import { Spinner } from "./common/spinner";
 import Image from "next/image";
 import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/solid";
 import { Ingredients } from "./ingredients";
+import Link from "next/link";
 
 export function RecipeContainer() {
   const { id } = useParams();
@@ -17,7 +18,14 @@ export function RecipeContainer() {
       data-testid="recipe-container"
     >
       {loading && <Spinner size="large" />}
-      {error && <div>Error: {error.message}</div>}
+      {error && (
+        <div>
+          Error: {error.message},{" "}
+          <Link href="/" className="underline cursor-pointer">
+            Search for other food
+          </Link>
+        </div>
+      )}
       {recipe && (
         <div className="flex flex-col md:w-2/3 md:overflow-hidden">
           <h1 className="text-2xl font-bold text-center mb-8">{recipe.name}</h1>
